@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>Landing Page - Dataviz project</title>
+		<script type="text/javascript" src="js/d3/d3.js"> </script>
+		
+</head>
+
+<body>
+	<script src="js/layerHistogram.js"></script>
+	<!--- <script type="text/javascript" src="js/time_use_map_europe.js"> </script> -->	 
+	<div class="content-section-b">
+		<div class="container">
+			<div id="objectives" class="row">
+				<div class="col-lg-6 col-lg-offset-3">
+					<h2 class="section-heading">Insights & Observations</h2>
+					<ul>
+						<li class="descriptions"><span class="mainpoint">Differences between gender </span>
+							
+						</li>
+						<br>
+						<li class="descriptions"><span class="mainpoint">Leisure :men versus women </span>
+							
+						</li>
+						<br>
+						<li class="descriptions"><span class="mainpoint">Household : Germany versus France </span>
+							
+						</li>
+						<br>
+						<li class="descriptions"><span class="mainpoint">Work: differences between countries </span>
+						
+						</li>
+						<br>
+						<li class="descriptions"><span class="mainpoint">Time spent on education between countries </span>
+
+						</li>
+						<br>
+					</ul>
+				</div>
+				<!--<div class="col-lg-6">-->
+				<!--<div id="floatingCirclesG">-->
+				<!--<div class="f_circleG" id="frotateG_01"></div>-->
+				<!--<div class="f_circleG" id="frotateG_02"></div>-->
+				<!--<div class="f_circleG" id="frotateG_03"></div>-->
+				<!--<div class="f_circleG" id="frotateG_04"></div>-->
+				<!--<div class="f_circleG" id="frotateG_05"></div>-->
+				<!--<div class="f_circleG" id="frotateG_06"></div>-->
+				<!--<div class="f_circleG" id="frotateG_07"></div>-->
+				<!--<div class="f_circleG" id="frotateG_08"></div>-->
+				<!--</div>-->
+				<!--<p class="ready">Get Set. Ready. Explore</p>-->
+				<!--</div>-->
+			</div>
+	
+		</div>
+		<!-- /.container -->
+	
+	</div>
+
+<!-- /.intro-header -->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<h2 class="tag text-center">Time Spent on <span id="update">Work</span></h2>
+				<h3 class="mainpoint text-center text-uppercase">[ <span id="state">All States</span> ]</h3>
+				<div id="overlapping-histogram"></div>
+			</div>
+			<div class="col-md-8">
+				<form class="form-inline">
+					<div class="form-group">
+						<br>
+						<label for="rankingType">Category to Map by: </label>
+						<select class="form-control" id="map-type" onchange="updateMap()">
+							<option value="Average Work">Average Working Time (hrs)</option>
+							<option value="Average Leisure">Average Leisure Time (hrs)</option>
+							<option value="Average Personal Care">Average Personal Care Time (hrs)</option>
+							<option value="Average Educational Time">Average Education Time (hrs)</option>
+							<option value="Average Household">Average Household (hrs)</option>
+						</select>
+						<div class="help-tip">
+							<p>The choropleth map shows average hours in various categories of time use across
+							different countries in Europe. Color intensity reflects the  average number of hours.
+							Hover over each country to see the distributions of hours that females and males in each country spend
+							for each category of time use in the histogram to the left. </p>
+						</div>
+					
+					</div>
+				</form>
+				<div id="content-1"></div>
+				<div id="visualization"></div>
+
+	</div>
+
+
+</body>
+
+</html>
